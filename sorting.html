@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sorting</title>
+    </head>
+    <body>
+        <h2>click on the buton to sort in ascending order</h2>
+        <button onclick="ascending()">Ascending order</button>
+        <button onclick="descending()">Descending order</button>
+        <p id="result"></p>
+        <script>
+            var point=[40,100,30,80,70,20]
+            document.getElementById("result").innerHTML = point;
+            function ascending(){
+                point.sort(function(a,b){return a-b});
+                document.getElementById("result").innerHTML = point;
+            }
+            function descending(){
+                point.sort(function(a,b){return b-a});
+                document.getElementById("result").innerHTML = point;
+            }
+        </script>
+    </body>
+</html>
